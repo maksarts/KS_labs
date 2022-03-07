@@ -1,0 +1,25 @@
+table{
+    width: 100%; 
+    margin-top: -1px;
+    margin-left: -3px;
+    /* border: 10px;
+    border-color: black; */
+}
+
+#menuCol{
+    width: 200px;
+    vertical-align: top;
+}
+
+#rightCol{
+    vertical-align: top;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#title91{
+    font-family:helvetica;
+    font-size: 30px;
+    border-radius: 5px;
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+#pic1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+}
+
+#pic2 {
+    margin-left: 100px;
+    margin-top: 100px;
+    text-align: center;
+    z-index: 11;
+    position: absolute;
+}
+
+#pic3 {
+    margin-left: 200px;
+    margin-top: 200px;
+    text-align: center;
+    z-index: 12;
+    position: absolute;
+}
+
+.lab7 {
+    height: 350px;
+    width: 350px;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+
+#textLab7{
+    /* margin-top: 20px; */
+    padding-top: 10px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-family:helvetica;
+    margin-left: 50px;
+}

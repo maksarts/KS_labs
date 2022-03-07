@@ -1,0 +1,70 @@
+.date{
+    position: relative;
+    /* top: 50%; */
+    /* width: 99%; */
+    margin-left: 150px;
+    font-size: 30px;
+    font-family: Verdana, Arial, Sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .clock {
+    position: relative;
+    /* top: 50%; */
+    margin-left: 130px;
+    font-size: 60px;
+    font-family: Verdana, Arial, Sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+  .clock ul {
+    margin: 0 auto;
+    list-style: none;
+  }
+  .clock ul li {
+    display: inline;
+  }
+  .clock ul li#separator {
+    animation: myfade 1s ease infinite;
+    -moz-animation: myfade 1s ease infinite;
+    -webkit-animation: myfade 1s ease infinite;
+    
+  }
+  
+  /* Animation */
+  @keyframes myfade {
+    0% {
+      opacity: 1.0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1.0;
+    }   
+  }
+  
+  @-webkit-keyframes myfade {
+    0% {
+      opacity: 1.0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1.0;
+    }   
+  }
+  
+  @-moz-keyframes myfade {
+    0% {
+      opacity: 1.0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1.0;
+    };
+  }

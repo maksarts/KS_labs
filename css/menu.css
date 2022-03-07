@@ -1,0 +1,106 @@
+ul, li, nav, a{margin: 0; padding: 0; }
+
+a{text-decoration:none; font-family:helvetica; }
+
+/* #blackBlock{
+    background: #1d1d1d;
+    z-index: 0;
+    height: 830px;
+    width: 205px;
+    position: absolute;
+} */
+
+#menuBlock{
+    position: sticky;
+    margin-top:-10px;
+    top: 0px;
+    z-index: 999;
+    margin-left: -10px;
+}
+
+#vertical-menu{
+    margin-top:0px;
+    top: 0px;
+    display:inline-block;
+    /*   border-radius:5px; */
+    box-sizing:border-box;
+    padding-left:0px;
+    margin-left:0px;
+    position: absolute;
+    /* height: 100%; */
+
+    background: #1d1d1d;
+    height: 754px;
+
+}
+.main-menu {
+  display:inline-block;
+  width:100%;
+  box-sizing:border-box;
+}
+.main-menu li{
+  position:relative;
+  height:50px;
+  box-shadow:0 -1px 0 0 #444, 0 -2px 0 0 #222;
+  list-style: none;
+}
+.main-menu>li>a>i{
+  color:rgb(204, 98, 37);
+  width:2em;
+  height:100%;
+  line-height:50px;
+  text-align:left;
+}
+
+.main-menu>li:first-child, .submenu-1>li:first-child, .submenu-2>li:first-child{
+  box-shadow:none;
+  list-style: none;
+}
+
+.submenu-1>li:first-child>a, .submenu-2>li:first-child>a{
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+.submenu-1>li:last-child>a, .submenu-2>li:last-child>a{
+   border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+  }
+
+.main-menu>li>a, .submenu-1>li>a, .submenu-2>li>a,.submenu-3>li>a{
+  color:rgb(204, 98, 37);
+  background:#1d1d1d;
+  line-height:50px;
+  display:block;
+  padding:0 1em;
+  z-index: 999;
+ 
+}
+
+ .submenu-1,.submenu-2, .submenu-3{
+  position:absolute;
+  white-space:nowrap;
+  top:-9999px;
+  z-index: 999;
+}
+.contain-submenu>a:first-child::after{
+/*   стрелочки */
+  content:" \f054";
+  padding-left:1em;
+  font-family:'FontAwesome';
+}
+
+/* появление сабменю: */
+.main-menu>li:hover .submenu-1, .submenu-1>li:hover .submenu-2, .submenu-2>li:hover .submenu-3{
+  top:0;
+  left:100%;
+  z-index: 999;
+}
+
+.main-menu>li:hover>a, .main-menu>li:hover>a>i, 
+.submenu-1 li:hover>a, .submenu-1 li:hover>a>i, 
+.submenu-2 li:hover>a, .submenu-2 li:hover>a>i {
+  color:rgb(255, 255, 255);
+  background: rgb(204, 98, 37);
+
+}
+

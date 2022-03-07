@@ -1,0 +1,14 @@
+#img92{
+    margin-top: -40px;
+} 
+
+#content{
+    font-family:helvetica;
+    font-size: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 680px;
+    margin-top: 130px;
+    position: relative;
+    display: inline-block;
+}
