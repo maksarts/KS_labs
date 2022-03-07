@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="../css/timer.css">
+
+        <script src="../js/timer.js"></script>
+        <script src="../js/test.js"></script>
+        <script>
+            function open_result(){
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("resultButton").style.display = "none";
+
+                // document.getElementById("testML").style.display = "none";                
+
+                document.getElementById("result_block").style.display = "block";
+                document.getElementById("againButton").style.display = "inline-block";
+
+                const res = result();
+                document.getElementById("testRes2").innerHTML = '<b>' + res + '%' + '</b>';
+
+                for(let i=0; i<6; i++){
+                    document.getElementsByClassName("correctAnswer")[i].style.display = "block";
+                }
+
+                // alert(`Ваш результат: ${res}%`);
+            }
+        </script>
+
+
+        <title>Тест "Машинное обучение: задачи и признаки"</title>
+    </head>
+
+    <body>
+
+        <header>
+        </header>
+
+        <main>
+            <div id="menuBlock">
+            <nav id="vertical-menu">
+                <ul class="main-menu">
+                  
+                  <li class="home"><a href="../main.html"><i class="fa fa-home"></i>Главная страница</a></li>
+                  <li class="contain-submenu"><a href="#"><i class="fa fa-desktop"></i>Лабораторные</a>
+                    <ul class="submenu-1">
+                      <li class="contain-submenu" ><a href="#">10.1</a>
+                         <ul class="submenu-2">
+                           <li><a href="10.1.html">Часть 1</a></li>
+                           <li><a href="10.1test.html">Часть 2</a></li>
+                         </ul>        
+                      
+                      </li>
+                    <li><a href="13.1.html">13.1</a></li>
+                    <li><a href="13.2.html">13.2</a></li>
+                    <li><a href="7.html">7</a></li>
+                    <li><a href="8.html">8</a></li>
+                    <li class="contain-submenu"><a href="#">9</a>
+                        <ul class="submenu-2">
+                            <li><a href="9.1.html">9.1</a></li>
+                            <li><a href="9.2.html">9.2</a></li>
+                            <li><a href="9.3.html">9.3</a></li>
+                          </ul>
+                    </li>
+                      
+                    </ul>
+                  
+                  </li>
+                  <li><a href="#"><i class="fa fa-cog"></i>Настройки</a></li>
+                  <li class="contain-submenu"><a href="#"><i class="fa fa-info-circle"></i>Информация</a>
+                     <ul class="submenu-1">
+                      <li><a href="#">Контакты</a></li>
+                      <li><a href="#">Литература</a></li>
+            
+                    </ul>      
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="timer">
+                <!-- <h1 id="headline">Осталось времени:</h1> -->
+                <div id="countdown">
+                <ul>
+                    <li class="timerLi"><span id="minutes"></span>Minutes</li>
+                    <li class="timerLi"><span id="seconds"></span>Seconds</li>
+                </ul>
+                </div>
+                <div id="content" class="result">
+                     <!-- Вывод результата -->
+                    <span>Время вышло :(</span>
+                    <br>
+                    <span>Результат на данный момент:</span>
+                    <br>
+                    <div id="testRes"></div>
+                </div>
+            </div>
+
+            <div id="testML">
+
+                <p id="testname">
+                    Выберите один (в первом вопросе) или несколько вариантов:
+                </p>
+                <br>
+            
+                <form class="question">
+                    <div>
+                        1. Рассмотрим признак "Число обращений клиента в службу поддержки банка". 
+                        Он принимает только целые неотрицательные значения. 
+                        Какой тип имеет данный признак?
+                    </div>
+                    <br>
+                    <label class="answer">
+                        <input type="radio" name="q1">
+                        Категориальный — он ведь может принимать значения лишь из конечного множества
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="radio" name="q1">
+                        Вещественный — ведь целые числа тоже являются вещественными.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="radio" name="q1">
+                        Бинарный — почему бы нет.
+                    </label>
+                </form>
+                <br>
+                <div class="correctAnswer">
+                    Верный ответ: 2
+                </div>
+                <form class="question">
+                    <div>
+                        2. Выберите верные утверждения про признаки.
+                    </div>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q2">
+                        Признаки не используются в задачах кластеризации и поиска аномалий.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q2">
+                        Предсказания для объектов делаются на основе значений признаков.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q2">
+                        Набор значений признаков на объекте представляет собой вектор определённой размерности.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q2">
+                        Признаки задаются только вещественными числами.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q2">
+                        Признаки описывают объекты в формате, с которым легко работать на компьютере.
+                    </label>
+                </form>
+                <br>
+                <div class="correctAnswer">
+                    Верные ответы: 2, 3, 5
+                </div>
+                <form class="question">
+                    <div>
+                        3. Выберите вещественные признаки из списка.
+                    </div>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q3">
+                        Количество детей
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q3">
+                        Год рождения
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q3">
+                        Город, в котором прописан клиент
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q3">
+                        Наличие у клиента банка военного билета
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q3">
+                        Температура воздуха
+                    </label>
+                </form>
+                <br>
+                <div class="correctAnswer">
+                    Верные ответы: 1, 2, 5
+                </div>
+                <form class="question">
+                    <div>
+                        4. Выберите признаки, которые могут рассматриваться только как категориальные 
+                        (и не могут рассматриваться как бинарные или вещественные).
+                    </div>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q4">
+                        Тарифный план клиента мобильного оператора
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q4">
+                        Тип дома — кирпичный, блочный, панельный и т.д.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q4">
+                        Цвет автомобиля
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q4">
+                        Скорость интернет-соединения
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q4">
+                        Год рождения
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q4">
+                        Наличие у клиента банка военного билета
+                    </label>
+                </form>
+                <br>
+                <div class="correctAnswer">
+                    Верные ответы: 1, 2, 3
+                </div>
+                <form class="question">
+                    <div>
+                        5. Выберите из списка задачи классификации.
+                    </div>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q5">
+                        Предсказание тарифного плана, который клиент захочет себе подключить.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q5">
+                        Определение стоимости одежды по фотографии.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q5">
+                        Определение возраста человека по его активности в сети.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q5">
+                        Поиск групп схожих пользователей мобильного оператора.
+                    </label>
+                </form>
+                <br>
+                <div class="correctAnswer">
+                    Верный ответ: 1
+                </div>
+                <form class="question">
+                    <div>
+                        6. Выберите верные утверждения про машинное обучение.
+                    </div>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q6">
+                        Алгоритм (или модель) — это функция, которая принимает на вход признаковое описание объекта и его ответ, 
+                        и выдаёт качество предсказаний для данного объекта.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q6">
+                        Функционал ошибки определяет уровень шума в признаках.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q6">
+                        Функционал ошибки позволяет определить, насколько данный алгоритм подходит для 
+                        решения задачи на конкретной выборке.
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q6">
+                        Алгоритм (или модель) — это функция, 
+                        которая принимает на вход признаковое описание объекта и выдает некоторое предсказание ответа
+                    </label>
+                    <br>
+                    <label class="answer">
+                        <input type="checkbox" name="q6">
+                        В задачах обучения с учителем требуется построить алгоритм, 
+                        который по признаковому описанию объекта предсказывает некоторый ответ.
+                    </label>
+                </form>
+                <br>
+                <div class="correctAnswer">
+                    Верные ответы: 3, 4, 5
+                </div>
+
+                <br>
+                <input id="resultButton" type="button" class="button" value="Узнать результат" onClick="open_result()">
+                
+                <form action="test.html" target="_self">
+                    <button id="againButton" class="button">Пройти тест заново</button>
+                </form>
+
+            </div>
+
+            <div id="result_block">
+                Результат:
+                <div id="testRes2"></div>
+            </div>
+
+        </main>
+
+        <!-- <footer>  
+            Эта страница написана Арцишевским Максимом из группы А-13-18.
+        </footer> -->
+
+    </body>
+
+</html>

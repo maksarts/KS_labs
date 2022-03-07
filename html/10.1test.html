@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/menu.css">
+
+        <script>
+            function open_result() {
+                let a1 = document.getElementsByTagName("input")[0].checked;
+                let a2 = document.getElementsByTagName("input")[1].checked;
+                let a3 = document.getElementsByTagName("input")[2].checked;
+                let a4 = document.getElementsByTagName("input")[3].checked;
+                let a5 = document.getElementsByTagName("input")[4].checked;
+                let a6 = document.getElementsByTagName("input")[5].checked;
+
+                if((a1 || a2) && (a3 || a4) && (a5 || a6)){
+                    let s = String(+a1)+"&"+String(+a3)+"&"+String(+a5);
+                result=window.open("10.1testResult.html?"+s, "result", "width=500,height=600");
+                }
+                else{
+                    alert("Надо ответить на все вопросы!")
+                }
+            }
+        </script>
+
+        <title>10.1 часть 2</title>
+    </head>
+
+    <body>
+
+        <header>
+        </header>
+
+        <main>
+            <div id="menuBlock">
+            <nav id="vertical-menu">
+                <ul class="main-menu">
+                  
+                  <li class="home"><a href="../main.html"><i class="fa fa-home"></i>Главная страница</a></li>
+                  <li class="contain-submenu"><a href="#"><i class="fa fa-desktop"></i>Лабораторные</a>
+                    <ul class="submenu-1">
+                      <li class="contain-submenu" ><a href="#">10.1</a>
+                         <ul class="submenu-2">
+                           <li><a href="10.1.html">Часть 1</a></li>
+                           <li><a href="10.1test.html">Часть 2</a></li>
+                         </ul>        
+                      
+                      </li>
+                    <li><a href="13.1.html">13.1</a></li>
+                    <li><a href="13.2.html">13.2</a></li>
+                    <li><a href="7.html">7</a></li>
+                    <li><a href="8.html">8</a></li>
+                    <li class="contain-submenu"><a href="#">9</a>
+                        <ul class="submenu-2">
+                            <li><a href="9.1.html">9.1</a></li>
+                            <li><a href="9.2.html">9.2</a></li>
+                            <li><a href="9.3.html">9.3</a></li>
+                        </ul>    
+                    </li>
+                      
+                    </ul>
+                  
+                  </li>
+                  <li><a href="#"><i class="fa fa-cog"></i>Настройки</a></li>
+                  <li class="contain-submenu"><a href="#"><i class="fa fa-info-circle"></i>Информация</a>
+                     <ul class="submenu-1">
+                      <li><a href="#">Контакты</a></li>
+                      <li><a href="#">Литература</a></li>
+            
+                    </ul>      
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <p id="testname">
+                Выберите по одному варианту ответа в каждом вопросе:
+            </p>
+            <br>
+            
+            <form class="question" name="question1">
+                Фон страницы
+                <br>
+                <label>
+                    <input type="radio" name="q1" value="v1">
+                    Черный
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="q1" value="v2">
+                    Белый
+                </label>
+            </form>
+            <br>
+            <form class="question">
+                Гифку?
+                <br>
+                <label>
+                    <input type="radio" name="q2" value="v1">
+                    Хочу
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="q2" value="v2">
+                    Не надо
+                </label>
+            </form>
+            <br>
+            <form class="question">
+                А анекдот?
+                <br>
+                <label>
+                    <input type="radio" name="q3" value="v1">
+                    А давайте
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="q3" value="v2">
+                    Мне не до шуток
+                </label>
+            </form>
+            <br>
+            <input type="button" class="button" value="Поехали" onClick="open_result()">
+
+        </main>
+
+        <!-- <footer>  
+            Эта страница написана Арцишевским Максимом из группы А-13-18.
+        </footer> -->
+
+    </body>
+
+</html>
