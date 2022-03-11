@@ -22,11 +22,14 @@
                 const res = result();
                 document.getElementById("testRes2").innerHTML = '<b>' + res + '%' + '</b>';
 
-                for(let i=0; i<6; i++){
-                    document.getElementsByClassName("correctAnswer")[i].style.display = "block";
+                for(let i=0; i<document.getElementsByTagName("input").length; i++){
+                    document.getElementsByTagName("input")[i].disabled = "true";
                 }
+                
 
                 // alert(`Ваш результат: ${res}%`);
+
+                
             }
         </script>
 
@@ -106,7 +109,7 @@
                 </p>
                 <br>
             
-                <form class="question">
+                <form class="question" id="ques1">
                     <div>
                         1. Рассмотрим признак "Число обращений клиента в службу поддержки банка". 
                         Он принимает только целые неотрицательные значения. 
@@ -128,11 +131,11 @@
                         Бинарный — почему бы нет.
                     </label>
                 </form>
-                <br>
+                <!-- <br>
                 <div class="correctAnswer">
                     Верный ответ: 2
-                </div>
-                <form class="question">
+                </div> -->
+                <form class="question"  id="ques2">
                     <div>
                         2. Выберите верные утверждения про признаки.
                     </div>
@@ -163,10 +166,10 @@
                     </label>
                 </form>
                 <br>
-                <div class="correctAnswer">
-                    Верные ответы: 2, 3, 5
+                <div class="correctAnswer" id="answ2">
+                    Выбраны не все варианты ответа
                 </div>
-                <form class="question">
+                <form class="question"  id="ques3">
                     <div>
                         3. Выберите вещественные признаки из списка.
                     </div>
@@ -197,10 +200,10 @@
                     </label>
                 </form>
                 <br>
-                <div class="correctAnswer">
-                    Верные ответы: 1, 2, 5
+                <div class="correctAnswer" id="answ3">
+                    Выбраны не все варианты ответа
                 </div>
-                <form class="question">
+                <form class="question"  id="ques4">
                     <div>
                         4. Выберите признаки, которые могут рассматриваться только как категориальные 
                         (и не могут рассматриваться как бинарные или вещественные).
@@ -237,10 +240,10 @@
                     </label>
                 </form>
                 <br>
-                <div class="correctAnswer">
-                    Верные ответы: 1, 2, 3
+                <div class="correctAnswer" id="answ4">
+                    Выбраны не все варианты ответа
                 </div>
-                <form class="question">
+                <form class="question"  id="ques5">
                     <div>
                         5. Выберите из списка задачи классификации.
                     </div>
@@ -265,11 +268,7 @@
                         Поиск групп схожих пользователей мобильного оператора.
                     </label>
                 </form>
-                <br>
-                <div class="correctAnswer">
-                    Верный ответ: 1
-                </div>
-                <form class="question">
+                <form class="question"  id="ques6">
                     <div>
                         6. Выберите верные утверждения про машинное обучение.
                     </div>
@@ -304,8 +303,8 @@
                     </label>
                 </form>
                 <br>
-                <div class="correctAnswer">
-                    Верные ответы: 3, 4, 5
+                <div class="correctAnswer" id="answ6">
+                    Выбраны не все варианты ответа
                 </div>
 
                 <br>
