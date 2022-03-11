@@ -98,7 +98,8 @@ a{text-decoration:none; font-family:helvetica; }
 
 .main-menu>li:hover>a, .main-menu>li:hover>a>i, 
 .submenu-1 li:hover>a, .submenu-1 li:hover>a>i, 
-.submenu-2 li:hover>a, .submenu-2 li:hover>a>i {
+.submenu-2 li:hover>a, .submenu-2 li:hover>a>i,
+.submenu-3 li:hover>a, .submenu-3 li:hover>a>i {
   color:rgb(255, 255, 255);
   background: rgb(204, 98, 37);
 
