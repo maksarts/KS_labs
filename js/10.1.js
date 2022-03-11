@@ -1,20 +1,40 @@
-function helloFunc(){
-  alert("Привет! Страница загружена.");
-}
+// async function helloFunc(){
+//   alert("Привет! Страница загружена.");
+// }
+
+// async function Clock(){
+//   setInterval(async function() {
+//     // Seconds
+//     var seconds = new Date().getSeconds();
+//     document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
+
+//     // Minutes
+//     var minutes = new Date().getMinutes();
+//     document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
+
+//     // Hours
+//     var hours = new Date().getHours();
+//     document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
+//   }, 1000);
+// }
 
 window.onload = function() {
-  helloFunc();
-  setInterval(function() {
-    // Seconds
-    var seconds = new Date().getSeconds();
-    document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
 
-    // Minutes
-    var minutes = new Date().getMinutes();
-    document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
+    alert("Привет! Страница загружена.");
+    
+    setInterval(async function() {
+      // Seconds
+      var seconds = new Date().getSeconds();
+      document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
 
-    // Hours
-    var hours = new Date().getHours();
-    document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
-  }, 1000);
+      // Minutes
+      var minutes = new Date().getMinutes();
+      document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
+
+      // Hours
+      var hours = new Date().getHours();
+      document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
+    }, 1000);
+
   }
+
